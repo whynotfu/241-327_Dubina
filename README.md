@@ -33,7 +33,7 @@
 
 Установить версию Python **на 1–2 релиза ниже** текущего последнего.
 > Весна 2026 — актуальная версия Python 13, значит устанавливаем **Python 11 или 12**.
-
+![alt text](image.png)
 ---
 
 ### 2. Установка пакетов PyPI
@@ -65,7 +65,6 @@ django-admin startapp mainapp
 ```python
 INSTALLED_APPS = [
     ...
-    'rest_framework',
     'mainapp',  # !!!
 ]
 ```
