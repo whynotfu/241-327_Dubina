@@ -1,0 +1,51 @@
+@hostname = http://localhost:8000
+
+
+### запрос на Create (C)RUD — создать игру
+POST {{hostname}}/api/games/
+Content-Type: application/json
+
+{
+    "title": "New Game",
+    "genre": "RPG",
+    "release_date": "2024-01-15",
+    "price": "999.99",
+    "rating": 8.5,
+    "is_multiplayer": true,
+    "description": "Описание игры"
+}
+
+### запрос на Retrieve C(R)UD — получить список всех игр
+GET {{hostname}}/api/games/
+Content-Type: application/json
+
+### запрос на Retrieve C(R)UD — получить игру по ID
+GET {{hostname}}/api/games/1/
+Content-Type: application/json
+
+### запрос на Update CR(U)D — полное обновление игры
+PUT {{hostname}}/api/games/1/
+Content-Type: application/json
+
+{
+    "title": "Updated Game",
+    "genre": "Action",
+    "release_date": "2024-06-01",
+    "price": "1299.99",
+    "rating": 9.0,
+    "is_multiplayer": false,
+    "description": "Обновлённое описание"
+}
+
+### запрос на Update CR(U)D — частичное обновление игры
+PATCH {{hostname}}/api/games/1/
+Content-Type: application/json
+
+{
+    "price": "799.99"
+}
+
+
+### запрос на Delete CRU(D) — удалить игру
+DELETE {{hostname}}/api/games/1/
+Content-Type: application/json
