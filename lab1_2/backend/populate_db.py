@@ -4,7 +4,7 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lab1.settings')
 django.setup()
 
-from mainapp.models import VideoGame
+from lab1_2.backend.mainapp.models import VideoGame
 from datetime import date
 
 games = [
