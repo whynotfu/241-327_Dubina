@@ -74,17 +74,6 @@ DATABASES = {
 
 Добавлены переменные `POSTGRES_*`, которые официальный Docker-образ PostgreSQL использует для автоматического создания базы данных при первом запуске. `DB_HOST` изменён на имя сервиса в Docker-сети:
 
-```dotenv
-SECRET_KEY=...
-
-POSTGRES_DB=lab1_db
-POSTGRES_USER=django
-POSTGRES_PASSWORD=1234
-
-DB_HOST=postgres-service
-DB_PORT=5432
-```
-
 ---
 
 ### 5. Написание `backend/Dockerfile`
