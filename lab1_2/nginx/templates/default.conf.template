@@ -1,0 +1,20 @@
+server {
+    listen 80;
+    server_name _;
+
+    include /etc/nginx/mime.types;
+    sendfile on;
+    charset utf8;
+    autoindex off;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+
+    location ~ ^/(admin|api)/?(.*)$ {
+        proxy_pass http://backend-service:8000;
+        proxy_set_header Host $host;
+    }
+
+    location /static {
+        alias /static;
+    }
+}
